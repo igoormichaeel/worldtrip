@@ -35,6 +35,7 @@ export function Banner() {
             color="gray.100"
             fontWeight="normal"
             mt={['1', '5']}
+            pb={['5', '5', '0']}
             lineHeight={['6', '8']}
             fontSize={['0.8rem', 'xl']}
             textAlign={['center', 'center', 'left']}

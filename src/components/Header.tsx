@@ -26,7 +26,7 @@ export function Header() {
       px={['4', '12', '24']}
     >
       {isHome === '/' ? (
-        <Box w={['10', '16']} />
+        <Box w={['10']} />
       ) : (
         <IconButton
           aria-label="Press to go back to previous page"

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Banner } from '../components/Banner';
 import { Header } from '../components/Header';
+import { TravelCategories } from '../components/TravelCategories';
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,8 @@ const Home: NextPage = () => {
       <Header />
 
       <Banner />
+
+      <TravelCategories />
 
       <Link href="/continent">Go to Europe</Link>
     </>
