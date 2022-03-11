@@ -7,8 +7,7 @@ export function TravelCategories() {
       w="90%"
       maxW="1160px"
       mx="auto"
-      mt={['10', '20']}
-      mb={['10', '20']}
+      my={['10', '10', '14', '20']}
       alignItems="center"
       justifyContent="center"
       templateColumns={['1fr 1fr', '1fr 1fr', '1fr 1fr', 'repeat(5, 1fr)']}

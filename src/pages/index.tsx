@@ -1,8 +1,11 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
+import type { NextPage } from 'next';
+import { Heading } from '@chakra-ui/react';
+
 import { Banner } from '../components/Banner';
 import { Header } from '../components/Header';
+import { Slider } from '../components/Slider';
+import { Divider } from '../components/Divider';
 import { TravelCategories } from '../components/TravelCategories';
 
 const Home: NextPage = () => {
@@ -18,7 +21,19 @@ const Home: NextPage = () => {
 
       <TravelCategories />
 
-      <Link href="/continent">Go to Europe</Link>
+      <Divider />
+
+      <Heading
+        fontSize={['xl', '2xl', '2xl', '2xl', '4xl']}
+        fontWeight="medium"
+        textAlign="center"
+        mb={['10', '10', '14', '20']}
+      >
+        Vamos nessa? <br />
+        Então escolha seu continente
+      </Heading>
+
+      <Slider />
     </>
   );
 };

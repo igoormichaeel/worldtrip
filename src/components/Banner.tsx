@@ -1,11 +1,5 @@
 import { Flex, Heading, Image, Text, VStack } from '@chakra-ui/react';
-// breakpoints:
-// ["sm", "md", "lg", "xl"]
-//
-// sm: '30em' = '480px',
-// md: '48em' = '768px',
-// lg: '62em' = '992px',
-// xl: '80em' = '1280px,
+
 export function Banner() {
   return (
     <>
