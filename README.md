@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# worldtrip
+![worldtrip-mockup](https://user-images.githubusercontent.com/31330416/158033825-7cfa3535-9851-4e92-a9ba-4214d40ef10c.png)
+
+
+## About this project
+A application of a tourism page developed at [Rocketseat's](https://www.rocketseat.com.br/) _Ignite ReactJS_ course using NextJS. The focus is to develop the entire interface using Chakra UI, keeping the page responsive. NextJS SSG (static site generation) was used for homepage and continents pages, and all data was provided by Prismic Headless CMS.
+
+## Technologies and tools
+
+- [ReactJS](https://reactjs.org/) as library
+- [NextJS](https://nextjs.org/) as framework
+- [TypeScript](https://www.typescriptlang.org/) as programming language
+- [Chakra UI](https://chakra-ui.com/) for interface
+- [Swiper](https://swiperjs.com/) for slider
+- [Prismic](https://prismic.io/) as headless CMS
+
+## Figma
+You can access the application layout in the Figma [project](https://www.figma.com/file/8QAkMs3BddatXn2fFseyu4/Desafio-1-M%C3%B3dulo-4-ReactJS/duplicate).
+
+## Demonstration
+https://user-images.githubusercontent.com/31330416/158033303-fd78199a-318c-46b8-bf71-c46506febee7.mp4
+
+## Production
+The application can be accessed [here](https://worldtrip-igoormichaeel.vercel.app/).
 
 ## Getting Started
 
-First, run the development server:
+### Requirements
+
+To run this project in the development mode, you'll need to have:
+- [Git](https://git-scm.com/)
+- [Yarn](https://classic.yarnpkg.com)
+
+### Installing
+
+On terminal, clone de repository and go to the directory
+```bash
+$ git clone https://github.com/igoormichaeel/worldtrip.git
+$ cd worldtrip
+```
+And execute the following command to install all de dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
+$ yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, to runs the app in the development mode, execute:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+$ yarn dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
