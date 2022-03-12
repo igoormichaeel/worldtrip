@@ -66,6 +66,7 @@ export function Slider({ continents }: SliderProps) {
               <Text
                 color="gray.100"
                 fontWeight="bold"
+                textAlign="center"
                 mt={['3', '3.5', '3.5', '3.5', '4']}
                 lineHeight={['3', '6', '6', '6', '9']}
                 fontSize={['lg', 'xl', 'xl', 'xl', '2xl']}

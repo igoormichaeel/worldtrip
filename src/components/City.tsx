@@ -58,7 +58,14 @@ export function City({
             {country}
           </Text>
         </VStack>
-        <Image src={srcFlag} alt={altFlag} w="30px" h="30px" />
+        <Image
+          src={srcFlag}
+          alt={altFlag}
+          w="30px"
+          h="30px"
+          borderRadius="full"
+          objectFit="cover"
+        />
       </HStack>
     </Flex>
   );
