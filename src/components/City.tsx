@@ -10,6 +10,7 @@ import {
 
 type CityProps = {
   city: string;
+  country: string;
   srcCover: string;
   altCover: string;
   srcFlag: string;
@@ -18,6 +19,7 @@ type CityProps = {
 
 export function City({
   city,
+  country,
   srcCover,
   altCover,
   srcFlag,
@@ -53,7 +55,7 @@ export function City({
             fontWeight="medium"
             lineHeight="26px"
           >
-            Reino Unido
+            {country}
           </Text>
         </VStack>
         <Image src={srcFlag} alt={altFlag} w="30px" h="30px" />

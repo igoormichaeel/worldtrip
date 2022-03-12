@@ -20,7 +20,7 @@ type ContinentProps = {
   cities: {
     uid: string;
     city: string;
-    countries: string;
+    country: string;
     srcCover: string;
     altCover: string;
     srcFlag: string;
@@ -63,6 +63,7 @@ export default function Continent({ continent, cities }: ContinentProps) {
           <GridItem key={city.uid}>
             <City
               city={city.city}
+              country={city.country}
               srcCover={city.srcCover}
               altCover={city.altCover}
               srcFlag={city.srcFlag}
@@ -125,7 +126,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       return {
         uid: city.uid,
         city: city.data.city[0].text,
-        countries: city.data.country[0].text,
+        country: city.data.country[0].text,
         srcCover: city.data.banner.url,
         altCover: city.data.banner.alt,
         srcFlag: city.data.flag.url,
