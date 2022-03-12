@@ -6,11 +6,20 @@ import {
   Autoplay,
   A11y,
 } from 'swiper';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Box, Heading, Text, VStack } from '@chakra-ui/react';
-import Link from 'next/link';
 
-export function Slider() {
+type SliderProps = {
+  continents: {
+    slug: string;
+    title: string;
+    summary: string;
+    bannerUrl: string;
+  }[];
+};
+
+export function Slider({ continents }: SliderProps) {
   return (
     <Box
       maxW="1240px"
@@ -33,101 +42,39 @@ export function Slider() {
           color: 'yellow.450',
         }}
       >
-        <SwiperSlide>
-          <VStack
-            bgImg="assets/images/continent.png"
-            w="100%"
-            h="100%"
-            bgSize="cover"
-            bgPosition="center"
-            justifyContent="center"
-          >
-            <Link href="/continent" passHref>
-              <Heading
-                as="a"
-                color="gray.50"
-                fontWeight="bold"
-                lineHeight={['8', '10', '10', '10', '72px']}
-                fontSize={['2xl', '4xl', '4xl', '4xl', '5xl']}
-              >
-                Europa
-              </Heading>
-            </Link>
-            <Text
-              color="gray.100"
-              fontWeight="bold"
-              mt={['3', '3.5', '3.5', '3.5', '4']}
-              lineHeight={['3', '6', '6', '6', '9']}
-              fontSize={['lg', 'xl', 'xl', 'xl', '2xl']}
+        {continents?.map((continent) => (
+          <SwiperSlide key={continent.slug}>
+            <VStack
+              bgImg={continent.bannerUrl}
+              w="100%"
+              h="100%"
+              bgSize="cover"
+              bgPosition="center"
+              justifyContent="center"
             >
-              O continente mais antigo.
-            </Text>
-          </VStack>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <VStack
-            bgImg="assets/images/continent.png"
-            w="100%"
-            h="100%"
-            bgSize="cover"
-            bgPosition="center"
-            justifyContent="center"
-          >
-            <Link href="/continent" passHref>
-              <Heading
-                as="a"
-                color="gray.50"
+              <Link href={`/continent/${continent.slug}`} passHref>
+                <Heading
+                  as="a"
+                  color="gray.50"
+                  fontWeight="bold"
+                  lineHeight={['8', '10', '10', '10', '72px']}
+                  fontSize={['2xl', '4xl', '4xl', '4xl', '5xl']}
+                >
+                  {continent.title}
+                </Heading>
+              </Link>
+              <Text
+                color="gray.100"
                 fontWeight="bold"
-                lineHeight={['8', '10', '10', '10', '72px']}
-                fontSize={['2xl', '4xl', '4xl', '4xl', '5xl']}
+                mt={['3', '3.5', '3.5', '3.5', '4']}
+                lineHeight={['3', '6', '6', '6', '9']}
+                fontSize={['lg', 'xl', 'xl', 'xl', '2xl']}
               >
-                Europa
-              </Heading>
-            </Link>
-            <Text
-              color="gray.100"
-              fontWeight="bold"
-              mt={['3', '3.5', '3.5', '3.5', '4']}
-              lineHeight={['3', '6', '6', '6', '9']}
-              fontSize={['lg', 'xl', 'xl', 'xl', '2xl']}
-            >
-              O continente mais antigo.
-            </Text>
-          </VStack>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <VStack
-            bgImg="assets/images/continent.png"
-            w="100%"
-            h="100%"
-            bgSize="cover"
-            bgPosition="center"
-            justifyContent="center"
-          >
-            <Link href="/continent" passHref>
-              <Heading
-                as="a"
-                color="gray.50"
-                fontWeight="bold"
-                lineHeight={['8', '10', '10', '10', '72px']}
-                fontSize={['2xl', '4xl', '4xl', '4xl', '5xl']}
-              >
-                Europa
-              </Heading>
-            </Link>
-            <Text
-              color="gray.100"
-              fontWeight="bold"
-              mt={['3', '3.5', '3.5', '3.5', '4']}
-              lineHeight={['3', '6', '6', '6', '9']}
-              fontSize={['lg', 'xl', 'xl', 'xl', '2xl']}
-            >
-              O continente mais antigo.
-            </Text>
-          </VStack>
-        </SwiperSlide>
+                {continent.summary}
+              </Text>
+            </VStack>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );

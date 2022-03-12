@@ -9,13 +9,20 @@ import {
 } from '@chakra-ui/react';
 
 type CityProps = {
+  city: string;
   srcCover: string;
   altCover: string;
   srcFlag: string;
   altFlag: string;
 };
 
-export function City({ srcCover, altCover, srcFlag, altFlag }: CityProps) {
+export function City({
+  city,
+  srcCover,
+  altCover,
+  srcFlag,
+  altFlag,
+}: CityProps) {
   return (
     <Flex w="256px" h="279px" borderRadius="base" direction="column">
       <Image src={srcCover} alt={altCover} w="100%" h="173px" />
@@ -38,7 +45,7 @@ export function City({ srcCover, altCover, srcFlag, altFlag }: CityProps) {
             fontWeight="semibold"
             lineHeight="25px"
           >
-            Londres
+            {city}
           </Heading>
           <Text
             color="gray.400"

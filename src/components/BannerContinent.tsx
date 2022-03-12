@@ -1,18 +1,26 @@
 import { Flex, Heading } from '@chakra-ui/react';
 import Head from 'next/head';
 
-export function BannerContinent() {
+type BannerContinentProps = {
+  continent: string;
+  bannerUrl: string;
+};
+
+export function BannerContinent({
+  continent,
+  bannerUrl,
+}: BannerContinentProps) {
   return (
     <>
       <Head>
-        <title>Worldtrip | Europa</title>
+        <title>Worldtrip | {continent}</title>
       </Head>
       <Flex
         w="full"
         h={['150px', '3xs', 'sm', 'md', '500px']}
         bgSize="cover"
         bgPosition="center bottom"
-        bgImg="assets/images/europe.png"
+        bgImg={bannerUrl}
         justifyContent={['center', 'start', 'start']}
         alignItems={['center', 'end', 'end']}
         px={['0', '12', '24', '32', '140px']}
@@ -23,7 +31,7 @@ export function BannerContinent() {
           fontWeight="semibold"
           fontSize={['2xl', '4xl', '4xl', '4xl', '5xl']}
         >
-          Europa
+          {continent}
         </Heading>
       </Flex>
     </>

@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^1.8.6",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@prismicio/client": "^6.4.1",
     "framer-motion": "^6",
     "next": "12.1.0",
     "nextjs-progressbar": "^0.0.14",

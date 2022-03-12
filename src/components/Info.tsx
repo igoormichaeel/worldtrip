@@ -1,7 +1,14 @@
 import { InfoOutlineIcon } from '@chakra-ui/icons';
 import { Flex, HStack, Text, Tooltip, VStack } from '@chakra-ui/react';
 
-export function Info() {
+type InfoProps = {
+  description: string;
+  countries: string;
+  languages: string;
+  hot50: string;
+};
+
+export function Info({ description, countries, languages, hot50 }: InfoProps) {
   return (
     <>
       <Flex
@@ -18,10 +25,7 @@ export function Info() {
           mx={['auto', 'auto', '0']}
           w={['100%', '100%', '600px', '800px']}
         >
-          A Europa é, por convenção, um dos seis continentes do mundo.
-          Compreendendo a península ocidental da Eurásia, a Europa geralmente
-          divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
-          rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.
+          {description}
         </Text>
 
         <HStack
@@ -36,7 +40,7 @@ export function Info() {
               fontWeight="semibold"
               lineHeight={['7', '8', '9', '10', '72px']}
             >
-              50
+              {countries}
             </Text>
             <Text
               fontSize={['sm', 'lg', 'lg', 'xl', '2xl']}
@@ -54,7 +58,7 @@ export function Info() {
               fontWeight="semibold"
               lineHeight={['7', '8', '9', '10', '72px']}
             >
-              60
+              {languages}
             </Text>
             <Text
               fontSize={['sm', 'lg', 'lg', 'xl', '2xl']}
@@ -72,7 +76,7 @@ export function Info() {
               fontWeight="semibold"
               lineHeight={['7', '8', '9', '10', '72px']}
             >
-              27
+              {hot50}
             </Text>
             <Flex alignItems="center" gap="2.5">
               <Text

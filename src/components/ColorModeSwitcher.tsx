@@ -1,9 +1,4 @@
-import {
-  IconButton,
-  IconButtonProps,
-  useColorMode,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { IconButton, IconButtonProps, useColorMode } from '@chakra-ui/react';
 import useSound from 'use-sound';
 
 import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
@@ -13,7 +8,7 @@ type ColorModeSwitcherProps = Omit<IconButtonProps, 'aria-label'>;
 export function ColorModeSwitcher({ ...rest }: ColorModeSwitcherProps) {
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const [play] = useSound('assets/sounds/light-switch.mp3', {
+  const [play] = useSound('/assets/sounds/light-switch.mp3', {
     volume: 0.05,
     sprite: {
       on: [0, 300],
