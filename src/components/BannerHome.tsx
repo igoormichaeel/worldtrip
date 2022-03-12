@@ -1,6 +1,6 @@
 import { Flex, Heading, Image, Text, VStack } from '@chakra-ui/react';
 
-export function Banner() {
+export function BannerHome() {
   return (
     <>
       <Flex

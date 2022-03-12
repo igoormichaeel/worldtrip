@@ -2,22 +2,22 @@ import Head from 'next/head';
 import type { NextPage } from 'next';
 import { Heading } from '@chakra-ui/react';
 
-import { Banner } from '../components/Banner';
 import { Header } from '../components/Header';
 import { Slider } from '../components/Slider';
 import { Divider } from '../components/Divider';
+import { BannerHome } from '../components/BannerHome';
 import { TravelCategories } from '../components/TravelCategories';
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Worldtrip</title>
+        <title>Worldtrip | Home</title>
       </Head>
 
       <Header />
 
-      <Banner />
+      <BannerHome />
 
       <TravelCategories />
 
